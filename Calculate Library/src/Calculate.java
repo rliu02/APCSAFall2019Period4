@@ -21,7 +21,6 @@ public class Calculate {
 		
 	}
 	
-	
 	// a call to cube returns the cube of a value passed
 	public static double average(double number1, number2) {
 		int answer=0;
