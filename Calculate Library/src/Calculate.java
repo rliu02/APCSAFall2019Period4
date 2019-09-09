@@ -61,5 +61,8 @@ public class Calculate {
 		
 	}
 	
+	//a call to convert a mixed number to an improper fraction
+	
+	
 }
 	
