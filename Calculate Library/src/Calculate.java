@@ -40,7 +40,7 @@ public class Calculate {
 	// a call to convert a value in radians to degrees when passed
 	public static double RadianToDegree(double number) {
 		double answer=0.0;
-		answer = (number%3.14159);
+		answer = (number/3.14159);
 		return answer;
 		
 	}
@@ -81,7 +81,6 @@ public class Calculate {
 	
 	//a call to foil converts binomial multiplication to quadratic form
 		public static String foil(int number1, int number2, int number3, int number4, String var) {
-			String var1 = "";	
 			
 
 
