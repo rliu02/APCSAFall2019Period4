@@ -80,13 +80,10 @@ public class Calculate {
 	}
 	
 	//a call to foil converts binomial multiplication to quadratic form
-		public static String foil(int a, int b, int c, int d, string s) {
-			int part1=0;
-			int part2=0;
-			int part3=0;
-			int part4=0;
-			part1 = 
+		public static String foil(int number1, int number2, int number3, int number4, String var) {
+			String var1 = "";	
 			
+
 
 			
 		}
