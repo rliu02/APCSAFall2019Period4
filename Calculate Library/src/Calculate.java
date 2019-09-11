@@ -6,7 +6,7 @@
 
 public class Calculate {
 	// a call to square returns the square of a value passed
-	public static int square(int number) {
+	public static int Square(int number) {
 		int answer=0;
 		answer = number*number;
 		return answer;
@@ -14,7 +14,7 @@ public class Calculate {
 	}
 	
 	// a call to cube returns the cube of a value passed
-	public static int cube(int number) {
+	public static int Cube(int number) {
 		int answer=0;
 		answer = number*number*number;
 		return answer;
@@ -22,7 +22,7 @@ public class Calculate {
 	}
 	
 	// a call to average the sum of two values passed
-	public static double average(double number1, double number2) {
+	public static double AverageOfTwo(double number1, double number2) {
 		double answer=0.0;
 		answer = (number1 + number2)/2;
 		return answer;		
@@ -30,7 +30,7 @@ public class Calculate {
 	}
 
 	// a call to average the sum of three values passed
-	public static double average(double number1, double number2, double number3) {
+	public static double AverageOfThree(double number1, double number2, double number3) {
 		double answer=0.0;
 		answer = (number1 + number2 + number3)/3;
 		return answer;
@@ -38,7 +38,7 @@ public class Calculate {
 	}
 	
 	// a call to convert a value in radians to degrees when passed
-	public static double convert1(double number) {
+	public static double RadianToDegree(double number) {
 		double answer=0.0;
 		answer = (number%3.14159);
 		return answer;
@@ -46,7 +46,7 @@ public class Calculate {
 	}
 	
 	// a call to convert a value in degrees to radians when passed
-	public static double convert2(double number) {
+	public static double DegreeToRadian(double number) {
 		double answer=0.0;
 		answer = (number*3.14159);
 		return answer;
@@ -54,7 +54,7 @@ public class Calculate {
 	}
 	
 	// a call to find the discriminant of the coefficients of a quadratic equation
-	public static double calculate(double a, double b, double c) {
+	public static double Discriminant(double a, double b, double c) {
 		double answer=0.0;
 		answer = ((b*b)-4*a*c)/2*a;
 		return answer;
@@ -62,7 +62,34 @@ public class Calculate {
 	}
 	
 	//a call to convert a mixed number to an improper fraction
+	public static String toImproperFrac(int number1, int numerator, int denominator) {
+		int answer=0;
+		answer = ((number1 * denominator) + numerator); 	
+		return (answer + "/" + denominator); 
+		
+	}
 	
+	//a call to convert an improper fraction to a mixed number
+	public static String toMixedNum(int number1, int number2) {
+		int answer=0;
+		int decimal=0;
+		answer = (number1/number2);
+		decimal = (number1%number2);
+		return (answer + "_" + decimal + "/" + number2);
+		
+	}
 	
+	//a call to foil converts binomial multiplication to quadratic form
+		public static String foil(int a, int b, int c, int d, string s) {
+			int part1=0;
+			int part2=0;
+			int part3=0;
+			int part4=0;
+			part1 = 
+			
+
+			
+		}
 }
+
 	
