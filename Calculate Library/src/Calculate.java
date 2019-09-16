@@ -5,87 +5,142 @@
  */
 
 public class Calculate {
+
+// Part 1: Methods, Headers, and Basic Math
+	
 	// a call to square returns the square of a value passed
 	public static int Square(int number) {
-		int answer=0;
-		answer = number*number;
-		return answer;
-		
+		return number*number;
 	}
 	
 	// a call to cube returns the cube of a value passed
 	public static int Cube(int number) {
-		int answer=0;
-		answer = number*number*number;
-		return answer;
+		return number*number*number;
+	} 
 		
-	}
-	
 	// a call to average the sum of two values passed
-	public static double AverageOfTwo(double number1, double number2) {
-		double answer=0.0;
-		answer = (number1 + number2)/2;
-		return answer;		
-		
+	public static double Average(double number1, double number2) {
+		return (number1 + number2)/2;		
 	}
 
 	// a call to average the sum of three values passed
-	public static double AverageOfThree(double number1, double number2, double number3) {
-		double answer=0.0;
-		answer = (number1 + number2 + number3)/3;
-		return answer;
-		
+	public static double Average(double number1, double number2, double number3) {
+		return (number1 + number2 + number3)/3;
 	}
 	
 	// a call to convert a value in radians to degrees when passed
-	public static double RadianToDegree(double number) {
-		double answer=0.0;
-		answer = (number/3.14159);
-		return answer;
-		
+	public static double toDegree(double radian) {
+		return (radian*180/3.14159);		
 	}
 	
 	// a call to convert a value in degrees to radians when passed
-	public static double DegreeToRadian(double number) {
-		double answer=0.0;
-		answer = (number*3.14159);
-		return answer;
-		
+	public static double toRadian(double degree) {
+		return (degree*3.14159/180);		
 	}
 	
 	// a call to find the discriminant of the coefficients of a quadratic equation
 	public static double Discriminant(double a, double b, double c) {
-		double answer=0.0;
-		answer = ((b*b)-4*a*c)/2*a;
-		return answer;
-		
+		return (-(b*b)-4*a*c)/(2*a);
 	}
 	
 	//a call to convert a mixed number to an improper fraction
-	public static String toImproperFrac(int number1, int numerator, int denominator) {
-		int answer=0;
-		answer = ((number1 * denominator) + numerator); 	
-		return (answer + "/" + denominator); 
-		
+	public static String toImproperFrac(int whole, int numerator, int denominator) {
+		return (((whole*denominator) + numerator) + "/" + denominator); 	
 	}
 	
 	//a call to convert an improper fraction to a mixed number
-	public static String toMixedNum(int number1, int number2) {
-		int answer=0;
-		int decimal=0;
-		answer = (number1/number2);
-		decimal = (number1%number2);
-		return (answer + "_" + decimal + "/" + number2);
-		
+	public static String toMixedNum(int numerator, int denominator) {
+		return ((numerator/denominator) + "_" + (numerator%denominator) + "/" + denominator);
 	}
 	
 	//a call to foil converts binomial multiplication to quadratic form
-		public static String foil(int number1, int number2, int number3, int number4, String var) {
-			
-
-
-			
-		}
-}
-
+	public static String foil(int a, int b, int c, int d, String var) {
+		return ((a*c) + var + "^2 + " + ((a*d) + (b*c) + "var") + (b*d));
+	}
 	
+// Part 2: Methods w/ Conditionals
+	
+	//a call to determine whether or not one integer is evenly divisible by the other
+	public static boolean isDivisibleBy(int number1, int number2) {
+		if (number1%number2 == 0) {
+				return true;
+		} else {
+				return false;	
+		}
+	}
+	
+	//a call to return the absolute value of a number passed
+	public static double absValue(double number) {
+		if (number > 0) {
+			return number;
+		} else {
+			return (number*-1);
+		}
+	}
+	
+	//a call to return the larger of two values passed
+	public static double max(double number1, double number2) {
+		if (number1 >= number2) {
+			return number1;
+		} else {
+			return number2;
+		}
+	}
+	
+	//a call to return the largest value of three values passed
+	public static double max(double number1, double number2, double number3) {
+		if (number1 > number2 && number1 > number3) {
+			return number1;
+		} else if (number2 > number1 && number2 > number3) {
+			return number2;
+		} else {
+			return number3;
+		}
+	}
+	
+	//a call to return the smaller of two values passed
+	public static int min(int number1, int number2) {
+		if (number1 > number2) {
+			return number2;
+		} else {
+			return number1;
+		}
+	}
+	
+	//a call to round a double to 2 decimal places
+	public static double round2(double number) {
+		number = number*100;
+		if (number > 0) {
+			number = number + 0.5;
+		} else {
+			number = number - 0.5;
+		}
+		number = (int) number;
+		number = ((double)number/100);
+		return number;
+	}
+	
+//Part 3: Methods that use Loops and Calls to Other Methods
+	
+	//a call to raise a value to an integer and returns a double
+	public static double exponent(double base, int power) {
+		double answer = 1;
+		for (int i=0; i<power; i++) {
+			answer = answer*base;
+		}
+		return answer;
+	}
+	
+	//a call to return the factorial of the value passed	
+	public static int factorial(int number) {
+		int answer=1;
+		for (int i=2; i <= number; i++) {
+			answer = answer*i;
+		} 
+		return answer;
+	}
+		
+		
+	}
+	
+}
