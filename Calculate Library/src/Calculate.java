@@ -39,8 +39,8 @@ public class Calculate {
 	}
 	
 	// a call to find the discriminant of the coefficients of a quadratic equation
-	public static double Discriminant(double a, double b, double c) {
-		return (-(b*b)-4*a*c)/(2*a);
+	public static double discriminant(double a, double b, double c) {
+		return ((b*b)-4*a*c)/(2*a);
 	}
 	
 	//a call to convert a mixed number to an improper fraction
@@ -139,8 +139,65 @@ public class Calculate {
 		} 
 		return answer;
 	}
-		
-		
+	
+	//a call to determine whether or not an integer is a prime
+	public static boolean isPrime(int number) {
+		for(int i = 2; i < number; i++) {
+			if(isDivisibleBy(number, i)) {
+				return false;
+			}
+		}
+		return true;
+		}
+	
+	//a call to find the greatest common factor between two positive integers
+	public static int gcf(int number1, int number2) {
+		int answer = 1;
+		for (int i = 1; i <= absValue(min(number1, number2)); i++) {
+			if (isDivisibleBy(number1, i) == true && isDivisibleBy(number2, i) == true) {
+				answer = i;
+			}
+		}
+		return answer;
+		}
+	
+	//a call to return the square root of a double rounded 2 decimal spots
+	public static double sqrt(double number) {
+		double test = 1;
+		while (absValue(number - (test * test)) > 0) {
+			test = 0.5 * ((number/test) + test);
+		}
+		test = round2(test);
+		return test;
 	}
 	
+//Part 4: Throwing Exceptions
+	
+	//a call to use the quadratic formula to approximate the roots of passed integers
+	public static String quadForm(int a, int b, int c) {
+		double root1;
+		double root2;
+		while (discriminant(a, b, c) > 0) {
+			root1 = ((-b + sqrt(discriminant(a, b, c))) / 2*a);
+			root2 = ((-b - sqrt(discriminant(a, b, c))) / 2*a);
+			if (root1 < root2) {
+				return root1 + " + " + root2;
+			} else {
+				return root2 + " + " + root1;
+			}
+		}
+			
+		if (discriminant(a, b, c) == 0) {
+			root1 = ((-b + sqrt(discriminant(a, b, c))) / 2*a);
+			return root1 + "";
+		}
+		
+		if (discriminant(a, b, c) < 0) {
+			return "no real roots";
+		}
+		return "";	
+	}
 }
+
+		
+	
