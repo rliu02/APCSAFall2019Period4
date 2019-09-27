@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class QuadraticClient {
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Welcome to the Quadratic Describer");
+		System.out.println("Provide values for the coefficients a, b, and c");
+		
+}
+}
+
