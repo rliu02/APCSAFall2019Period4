@@ -1,5 +1,0 @@
-scanner 
-get input 
-call produce answer 
-call split
-return
